@@ -9,6 +9,7 @@
 }
 
 .calc-screen {
+    height: 118.4px;
     padding-top: 10px;
     padding-right: 30px;
     text-align: right;
@@ -30,10 +31,13 @@
     border-radius: 50%;
     margin-top: 10px;
     text-align: center;
+    opacity: 80%;
 }
 
 .btn:hover{
     cursor: pointer;
+    opacity: 100%;
+    
 }
 
 .bg-orange {
