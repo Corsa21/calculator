@@ -52,30 +52,33 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
 
     //если нажата кнопка '='
     if (key === '=') {
-        if (b === '') {
-            a *= a;
-
+        if (sign.includes('/') && b === '0') {
+            out.textContent = 'Ошибка';
+            a = '';
+            b = '';
+            sign = '';
+            finish = false;
+            return;
         }
-        if (sign.includes('X')) {
-            a = Number(a) * Number(b);
-        } else if (sign.includes('/')) {
-            if (b === '0') {
-                out.textContent = 'Ошибка';
-                a = '';
-                b = '';
-                sign = '';
-                return
-            }
-            a = Number(a) / Number(b);
-        } else if (sign.includes('-')) {
-            a = Number(a) - Number(b);
-        } else if (sign.includes('%')) {
-            a = Number(a) % Number(b);
-        } else if (sign.includes('+')) {
-            a = Number(a) + Number(b);
+        switch (sign) {
+            case 'X':
+                a = (+a) * (+b);
+                break;
+            case '/':
+                a = (+a) / (+b);
+                break;
+            case '+':
+                a = (+a) + (+b);
+                break;
+            case '-':
+                a = (+a) - (+b);
+                break;
+            case '%':
+                a = (+a) % (+b);
+                break;
         }
-        finish = true;
         out.textContent = a;
+        finish = true;
     }
 
     //если нажата кнопка '+/-'
