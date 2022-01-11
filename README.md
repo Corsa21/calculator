@@ -2,4 +2,4 @@
 
 Задача: написать простой калькулятор на чистом javascript с экраном вывода
 числа и выражения
-![Image alt](https://github.com/Corsa21/calculator/raw/main/preview/image.png)
+![Иллюстрация к проекту](https://github.com/Corsa21/calculator/raw/main/preview/image.png)
