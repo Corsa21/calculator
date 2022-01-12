@@ -201,6 +201,7 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
         output.push(key);    
         out.innerHTML = sum;
         outExp.innerHTML = output.join('');
+        //если нажимаешь цифру после итога
         if(summary.length == 1 && sign && !action.includes(key)){
             clearAll();
             sum+=key;
@@ -250,6 +251,7 @@ document.querySelector('.buttons').addEventListener('click', (event) => {
         out.innerHTML = key;
         outExp.innerHTML = output.join('');
         sum = '';
+        //удаляет лишний ноль(баг)
         if(summary[1] == Number(summary[1])){
             summary.splice(1,1)
         }
